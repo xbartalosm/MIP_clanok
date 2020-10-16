@@ -1,40 +1,25 @@
-% Metódy inžinierskej práce
-
-\documentclass[10pt,twoside,slovak,a4paper]{article}
-
-\usepackage[slovak]{babel}
-%\usepackage[T1]{fontenc}
-% \usepackage[IL2]{fontenc} % lepšia sadzba písmena Ľ než v T1
+\documentclass[10pt,twoside,english,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
-\usepackage{url} % príkaz \url na formátovanie URL
-\usepackage{hyperref} % odkazy v texte budú aktívne (pri niektorých triedach dokumentov spôsobuje posun textu)
-
+\usepackage{url} 
+\usepackage{hyperref} 
 \usepackage{cite}
 %\usepackage{times}
-
-
-
 \pagestyle{headings}
 
-\title{Improving computer science and software engineering education in cyberlearning environments through understanding UI and UX design\thanks{Semestrálny projekt v predmete Metódy inžinierskej práce, ak. rok 2020/21, vedenie: Martin Sabo}} % meno a priezvisko vyučujúceho na cvičeniach
-% \title{Improving computer science and software engineering education in cyberlearning environments through understanding UI and UX design}
-\author{Márk Bartalos \\[2pt]
+\title{Improving computer science and software 
+engineering education in cyberlearning 
+environments through understanding UI and UX design
+\thanks{Semestrálny projekt v predmete Metódy inžinierskej práce,
+ ak. rok 2020/21, vedenie: Martin Sabo}}
 
+\author{Márk Bartalos \\[2pt]
         \small{Slovak University of Technology in Bratislava}\\
         \small{Faculty of Informatics and Information Technologies}\\
         \small{\texttt{xbartalosm@stuba.sk}}
-
 }
 
-% \author{Meno Priezvisko\\[2pt]
-% 	{\small Slovenská technická univerzita v Bratislave}\\
-% 	{\small Fakulta informatiky a informačných technológií}\\
-% 	{\small \texttt{...@stuba.sk}}
-% 	}
-
-\date{\small 30. september 2020} % upravte
-
+\date{\small 30. september 2020}
 
 
 \begin{document}
@@ -53,6 +38,7 @@ oriented cyberlearning environments for computer science and software engineerin
 
 
 \section{Introduction}
+We speak about distance learning for about two centuries \cite{moore_2011_elearning} 
 
 % Motivujte čitateľa a vysvetlite, o čom píšete. Úvod sa väčšinou nedelí na časti.
 
@@ -62,8 +48,14 @@ oriented cyberlearning environments for computer science and software engineerin
 % Záverečné poznámky prináša časť~\ref{zaver}.
 
 \section{Graphics}
+
+\begin{figure}
 \includegraphics[width=0.75\textwidth]{images/diagram-crop.pdf}
+\end{figure}
+
+\begin{figure}
 \includegraphics[width=0.75\textwidth]{images/flowchart-crop.pdf}
+\end{figure}
 % \section{Nejaká časť} \label{nejaka}
 
 % Z obr.~\ref{f:rozhod} je všetko jasné. 
@@ -135,6 +127,6 @@ oriented cyberlearning environments for computer science and software engineerin
 
 
 % týmto sa generuje zoznam literatúry z obsahu súboru literatura.bib podľa toho, na čo sa v článku odkazujete
-\bibliography{literatura}
+\bibliography{citations}
 \bibliographystyle{plain} % prípadne alpha, abbrv alebo hociktorý iný
 \end{document}
