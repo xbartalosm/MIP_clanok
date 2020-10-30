@@ -38,22 +38,25 @@ oriented cyberlearning environments for computer science (CS) and software engin
 
 
 \section{Introduction}
-We speak about distance learning from around two centuries ago\cite{moore_2011_elearning}, but only now
-it is becoming a necessity rather than an option. Especially now in the middle of a pandemic, use of online 
-education environments is more needed than ever. This article will focus on online cyberlearning environments 
-mainly designed for computer science and software engineer students. 
+We speak about distance learning from around two centuries ago\cite{moore_2011_elearning}, under which
+I am referring to learning through online environments. What distance learning really means is highly debated\cite{moore_2011_elearning},
+but I believe it can also refer to learning through online environments, because lot of authors use these terms as
+synonyms\cite{distance_definition}\cite{moore_2011_elearning}. 
+Now distance learning is becoming a necessity rather than an option. Especially in the middle of a pandemic, use of online 
+education environments have become more needed than ever. This article will focus on online cyberlearning environments 
+mainly designed for computer science (CS) and software engineer (SE) students.
 % Implementing cyberlearning 
 % environments for teaching these fields can be the more beneficial than implementing it in teaching for non computer 
 % related fields. 
 
 
-Design of the environment has a very big role in the effectiveness and in 
-its ability to properly convey information. \cite{ui/ux}
-About the most common problems with the currently running cyberlearning environment (CLE)
-designs I will talk about more in the following section *section num*.
-The used methods which will be explored more in section *put section number here*.
+The used terms will be defined in the definitions section \ref{definitions}.
+Methods that could be used will be explored more in section Methods for analysis \ref{methods}.
+I will talk more about the most common problems with the currently implemented cyberlearning environment (CLE)
+designs in the Common problems section\ref{problems}.
 
-\section{Definitions}
+
+\section{Definitions}\label{definitions}
 
 \subsection{Cyberlearning}
 For cyberlearning I will use the definition by National Science Foundation: 
@@ -63,16 +66,17 @@ encompassing online environment which can motivate, inspire and and teach studen
 computer systems and networking technologies as primary tools. \cite{ui/ux}
 Primary goal of cyberlearning is to provide learning experiences via a technology-based platform. 
 Cyberlearning in some way is an extension of and a twist on e-learning.\cite{lynch_2020_cyberlearning}
-While e-learning refers to how the content is delivered, in cyberlearning technology
+While e-learning refers to how the content is delivered, in cyberlearning, technology
 is used to carry out learning experiences which would be otherwise impossible without technology.\cite{lynch_2020_cyberlearning}
 
 \subsection{Cyberlearning env. for CS and SE students}
 Under the term ``Cyberlearning environments for computer science and software engineer students', I am mainly
-referring to online CLE which enable students to write and compile code online. These CLE are equipped with 
+referring to an online CLE which enable students to write and compile code online. These are all encompassing
+environments, meaning they are equipped with 
 online compilers and debugging tools, so students don't require any additional software to be installed on their PC, making
-the whole programming experience much more enjoyable.
-With the help of these kind of CLEs students are able to learn the curriculum through lectures and practice practice
-what they learnt, with only requiring a web browser.
+the whole programming experience more accessible for everyone.
+With the help of these kind of CLEs students are able to learn the curriculum through lectures and practice
+what they have learnt, with only requiring a web browser.
 
 \subsection{User Interface (UI)}
 UI and UX are often confused terms. \cite{theymakedesign_2019_what} They have similarities, but in reality
@@ -81,31 +85,59 @@ UI stands for User Interface. User Interface design defines the graphical layout
 User interface designers are responsible for defining the how each element will look, their size and position.
 Its their job to make the look and feel of the page or application aesthetically pleasing and 
 attractive. Animation, transition design, choosing of the correct fonts and images also part of the UI design, 
-these have to be designed such a way that they are in harmony with each other and logically connected to each other.
+these have to be designed such a way that they are in harmony and logically connected to each other.
 \cite{theymakedesign_2019_what}
 
 \subsection{User Experience (UX)}
 UX stands for ``user experience". UX designers are also concerned with the User interface. \cite{theymakedesign_2019_what}
 The main difference between UI and UX is that while UI focuses on the look of the application,
 UX focuses on the functionality and interactions of the application. UX designers are 
-responsible form making sure the User Experience is intuitive and easily understood by everyone.
+responsible form making sure the User Experience is intuitive and can be easily understood by everyone.
 They have to make sure that the connection between different parts are organized in a logical way.
 UX designers are also have to have and understanding of how users interact with their
 device so that the UX can be easy to use and user friendly. \cite{theymakedesign_2019_what}
 
-\section{Importance of UI/UX in CLEs}
+\section{Importance of UI/UX design}\label{importance}
+Design of the environment has a big role in the effectiveness and in 
+its ability to properly convey information. \cite{ui/ux}
+By a study done in 2002 called "Usability evaluation of web-based learning", we know that User interface
+has reasonable impact on the student's behavior while using the environment.\cite{wesson_2002_usability}
+The study concluded that students preferred the environment which provided a consistent experience and could be navigated more easily
+\cite{wesson_2002_usability}. That is why its necessary to create CLEs that can be easily navigated,
+where information and tools are arranged into logical groups and have a consistent user-friendly design.
 
-\begin{figure}
-    \includegraphics[width=1\textwidth]{images/diagram-crop.pdf}
-    \caption{Diagram illustrating the role of UI/UX in CLE}
-\end{figure}
+
+% \begin{figure}
+%     \includegraphics[width=1\textwidth]{images/diagram-crop.pdf}
+%     \caption{Diagram illustrating the role of UI/UX in CLE}
+% \end{figure}
 
 
-\section{Used methods for analysis}
+\section{Methods for analysis}\label{methods}
+There are several methods for testing UI/UX design of online environments. The testing 
+can be automated or done by a group of people manually.
 
-\section{Found problems}
+\subsection{Automated testing}
+Automated testing of UI is a relatively new thing.\cite{automated_testing_ifml} There aren't many well known methods
+providing fully automatic testing of a web environment, but a recent study shows that
+it is possible using Interaction Flow Modeling Language (IFML) Models.\cite{automated_testing_ifml}
+IFML is evolved from WebML and its designed to capture the structure, user interaction and control
+flow of front-end of web applications.\cite{automated_testing_ifml}.
+To automate and validate the UI design the developers have to create an IFML model
+of the front-end. In order to design an IFML model, an UML (Universal Modelling Language) model 
+containing the domain concepts of the application is required.\cite{automated_testing_ifml}. 
+When the IFML and the UML models are created they have to be processed by an application written 
+in Java, which will generate a test case document (.txt), a Navigation Modell (.xta) and the State Transition 
+Matrix (.xls). Then the generated data can be used to analyze and easily spot the flaws with the web application.
+\cite{automated_testing_ifml}. 
+By using this program we can analyze all web based CLEs targeted for CS (computer science) and SE(software engineer) 
+students. The produced data then could be used to improve their layout, remove confusing elements and improve the usability of the design,
+making the learning process more efficient.
 
-\section{Possible solutions}
+
+\section{Most common problems}\label{problems}
+
+% \section{Possible solutions}
 
 \section{Conclusion}
 
@@ -123,9 +155,9 @@ device so that the UX can be easy to use and user friendly. \cite{theymakedesign
 
 
 
-\begin{figure}
-\includegraphics[width=0.75\textwidth]{images/flowchart-crop.pdf}
-\end{figure}
+% \begin{figure}
+% \includegraphics[width=0.75\textwidth]{images/flowchart-crop.pdf}
+% \end{figure}
 % \section{Nejaká časť} \label{nejaka}
 
 % Z obr.~\ref{f:rozhod} je všetko jasné. 
