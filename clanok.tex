@@ -6,6 +6,7 @@
 \usepackage{cite}
 \pagestyle{headings}
 
+
 \title{Improving computer science and software 
 engineering education in cyberlearning 
 environments through understanding UI and UX design
@@ -29,8 +30,9 @@ environments through understanding UI and UX design
     In order to make these CLEs as effective and user-friendly as possible, we need to understand how their design
     works and what common problems can occur. This article will offer possible testing solutions for analyzing and testing
     the design of complex CLEs and web tools targeted for computer science (CS) and software engineer (SE) students. 
-    It will give a better understanding what exactly is meant under the terms ``UI/UX" and will list possible solutions that
-    can be implemented to improve current environment designs, leading to improvement in teaching these field.
+    It will give a better understanding what exactly is meant under the terms ``UI/UX", will include an analysis of
+    popular online CLEs, which can serve as a pointer for improving these environments, which will in a way improve teaching these fields.
+    
 \end{abstract}
 
 
@@ -40,16 +42,22 @@ We speak about distance learning from around two centuries ago, under which
 I am referring to learning through online environments\cite{moore_2011_elearning}. What distance learning really means is highly debated,
 but I believe it can also refer to learning through online environments, because lot of authors use learning through an online environment and distance learning as
 synonyms\cite{moore_2011_elearning}\cite{distance_definition}. 
+\paragraph{Technology and people}
+Cyberlearning seems as a very promising technology for helping us in learning and in the automatization of the learning
+experience. It has a potential to revolutionize how we learn today, be replacing face to face learning with
+learning through technology.
+
 Now distance learning is becoming a necessity rather than an option. Especially in the middle of a pandemic, use of online 
 education environments have become more needed than ever. This article will focus on online cyberlearning environments 
 mainly designed for computer science (CS) and software engineer (SE) students.
+
 
 \section*{Contents}
 
 \begin{itemize}
      \item The used terms will be defined in the definitions section \ref{definitions}.
      \item Methods that could be used will be explored more in section ``Methods for analysis" \ref{methods}.
-     \item I will talk more about the most common problems with the currently implemented cyberlearning environment designs in the ``Common problems section" \ref{problems}.
+     \item I will have an analysis of the most commonly used environments in the section `` Analysis of popular environments" \ref{analysis}.
 \end{itemize}
 
 
@@ -98,6 +106,11 @@ device so that the UX can be easy to use and user friendly\cite{theymakedesign_2
 UI is the interface between the user and the functionality of the application. UI and UX are responsible for
 how the content is presented, how the navigation works, how the different interactions behave. It 
 has complete control over what the users sees.
+
+\paragraph{Graphical expression of information}
+It is very important how we present the information. Graphical expression of information is on of the best methods of presentation. CLEs can be
+a great tool for graphically presenting data. There is difference even in two graphical presentations,
+that is why we have to pay attention to how is the UI of the presentation designed and implemented. 
 
 
 Design of the environment has a big role in the effectiveness and in 
@@ -163,11 +176,43 @@ The produced data then could be used to improve their layout, remove confusing e
 making the learning process more efficient.
 
 
-\section{Most common problems}\label{problems}
+\section{Analysis of popular environments}\label{analysis}
+The alaysis was done on the following online environments: Udemy, Skillshare, Freecodecamp, Treehouse.
+The analysis was done by myself due to lack of resources for hiring a professional team. The results are integer values
+from 1-10 where 10 is the best and 1 is the worst. The produced data is not as accurate as it was done
+by a professional testing team, it can be subjective, but it should serve as a general pointer for
+how these online CLEs compare to each other.
 
-% \section{Possible solutions}
+% Please add the following required packages to your document preamble:
+
+\begin{center}
+    \begin{tabular}{|l|l|l|l|l|}
+    \hline
+                            & \textbf{Udemy} & \textbf{Skillshare} & \textbf{Freecodecamp} & \textbf{Treehouse} \\ \hline
+    Overall usability       & 8              & 10                  & 5                     & 9                  \\ \hline
+    Design intuitivness     & 6              & 10                  & 5                     & 10                 \\ \hline
+    Navigation layout       & 8              & 9                   & 6                     & 8                  \\ \hline
+    Inform. arrangement     & 8              & 10                  & 6                     & 9                  \\ \hline
+    \textbf{Total}          & 30             & 39                  & 22                    & 36                 \\ \hline
+    \end{tabular}
+\end{center}
+
 
 \section{Conclusion}
+The currently available online CLEs can be a great tool for improving the learning process, but for 
+them to do that they need to be implemented correctly, they have to be easy to use and compatible 
+with most of the popular browsers. Our analysis shows that most of the popular ones are
+implemented well. Most of them had a well designed navigation layout, the information were arranged
+in a way that everything could be found easily and all of them were easy to use.   
+
+\subsection*{Testing}
+There is a growing need of development in testing of these web based learning environments, in order
+to improve them and make the learning experience more effective.
+Although there are solutions for automatically analyzing web applications, this technology is still work
+in progress. Manual heuristic analysis can be done by everyone, but the results will not be as precise as
+in a case done by a professional or by multiple people. For precise data more people is needed.
+
+
 
 
 \bibliography{citations}
