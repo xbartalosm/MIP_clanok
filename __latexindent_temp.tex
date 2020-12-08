@@ -4,6 +4,7 @@
 \usepackage{url} 
 \usepackage{hyperref} 
 \usepackage{cite}
+\usepackage{float}
 \pagestyle{headings}
 
 
@@ -28,11 +29,10 @@ environments through understanding UI and UX design
     In our day and age cyberlearning for computer science and software engineering education has become more popular than ever.
     Thanks to its growing popularity and adoption rate, online cyberlearning environments (CLE) are advancing very quickly.
     In order to make these CLEs as effective and user-friendly as possible, we need to understand how their design
-    works and what common problems can occur. This article will offer possible testing solutions for analyzing and testing
+    works and what common problems they have. This article will offer possible testing solutions for analyzing and testing
     the design of complex CLEs and web tools targeted for computer science (CS) and software engineer (SE) students. 
     It will give a better understanding what exactly is meant under the terms ``UI/UX", will include an analysis of
     popular online CLEs, which can serve as a pointer for improving these environments, which will in a way improve teaching these fields.
-    
 \end{abstract}
 
 
@@ -43,8 +43,8 @@ I am referring to learning through online environments\cite{moore_2011_elearning
 but I believe it can also refer to learning through online environments, because lot of authors use learning through an online environment and distance learning as
 synonyms\cite{moore_2011_elearning}\cite{distance_definition}. 
 \paragraph{Technology and people}
-Cyberlearning seems as a very promising technology for for helping us in the learning and automatization of the learning
-experience. It has a potential to revolutionize how we learn today, be replacing face to face learning with
+Cyberlearning seems as a very promising technology for helping us in learning and in the automatization of the learning
+experience. It has the potential to revolutionize how we learn today, by replacing face to face learning with
 learning through technology.
 
 Now distance learning is becoming a necessity rather than an option. Especially in the middle of a pandemic, use of online 
@@ -55,9 +55,9 @@ mainly designed for computer science (CS) and software engineer (SE) students.
 \section*{Contents}
 
 \begin{itemize}
-     \item The used terms will be defined in the definitions section \ref{definitions}.
-     \item Methods that could be used will be explored more in section ``Methods for analysis" \ref{methods}.
-     \item I will have an analysis of the most commonly used environments in the section `` Analysis of popular environments" \ref{analysis}.
+     \item The used terms will be defined in the ``Definitions" section \ref{definitions}.
+     \item Methods that could be used for testing will be explored further in section ``Methods for analysis" \ref{methods}.
+     \item I will have an analysis of the most commonly used environments in the section ``Analysis of popular environments" \ref{analysis}.
 \end{itemize}
 
 
@@ -96,7 +96,7 @@ these have to be designed such a way that they are in harmony and logically conn
 \subsection{User Experience (UX)}
 UX stands for ``user experience". UX designers are also concerned with the user interface\cite{theymakedesign_2019_what}. 
 The main difference between UI and UX is that while UI focuses on the look of the application,
-UX focuses on the functionality and interactions of the application. UX designers are 
+UX focuses on the functionality and on the interactions between the components. UX designers are 
 responsible form making sure the user experience is intuitive and can be easily understood by everyone.
 They have to make sure that the connection between different parts are organized in a logical way.
 UX designers are also have to have an understanding of how users interact with their
@@ -106,10 +106,14 @@ device so that the UX can be easy to use and user friendly\cite{theymakedesign_2
 UI is the interface between the user and the functionality of the application. UI and UX are responsible for
 how the content is presented, how the navigation works, how the different interactions behave. It 
 has complete control over what the users sees.
-
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{images/ui-diagram2.png}
+    \caption{Diagram illustrating the role of UI in CLE}
+\end{figure}
 \paragraph{Graphical expression of information}
-It is very important how we present the information. Graphical expression of information is on of the best methods of presentation. CLEs can be
-a great tool for graphically presenting data. There is difference even in two graphical presentations,
+It is very important how we present the information. Graphical expression of information is one of the best methods of presentation. CLEs can be
+a great tool for graphically presenting data. There is difference even between two graphical presentations,
 that is why we have to pay attention to how is the UI of the presentation designed and implemented. 
 
 
@@ -118,13 +122,10 @@ its ability to properly convey information \cite{ui/ux}.
 By a study done in 2002 called "Usability evaluation of web-based learning", we know that User interface
 has reasonable impact on the student's behavior while using the environment\cite{wesson_2002_usability}.
 The study concluded that students preferred the environment which provided a consistent experience and could be more easily navigated 
-\cite{wesson_2002_usability}. That is why its necessary to create CLEs that can be easily navigated,
-where information and tools are arranged into logical groups and have a consistent user-friendly design.
+\cite{wesson_2002_usability}. That is why its necessary to create CLEs that are easy to navigate,
+information and tools are arranged into logical groups and have a consistent user-friendly design.
 
-\begin{figure}[h]
-    \includegraphics[width=1\textwidth]{images/ui-diagram2.png}
-    \caption{Diagram illustrating the role of UI in CLE}
-\end{figure}
+
 
 
 \section{Methods for analysis}\label{methods}
@@ -132,34 +133,35 @@ There are several methods for testing UI/UX design of online environments. The t
 can be automated or done by a group of people manually.
 
 \subsection{Heuristic evaluation}
-Heuristic evaluation of the interface can be done by one person, but
-its not recommended because one person will never be able to
+Heuristic evaluation of the interface is a manual method and can be done by only one person, but
+its not recommended. One person will never be able to
 find all the problems, so it is usually done by a group of people\cite{a2020_heuristic}. 
 The result of six studies shows that the number of errors spotted is proportional to the number of evaluators,
-meaning that with the increase in the number of evaluators, precision of the evaluation increases, see Figure~\ref{fig:increase}.
+meaning that with the increase in the number of evaluators, precision of the evaluation increases, see Figure~\ref{fig:increase} \cite{a2020_heuristic}.
 Heuristic evaluation consists of each individual inspecting the interface alone. Only after the
 inspection are they allowed to communicate with each other or have their findings aggregated\cite{a2020_heuristic}.
 This method can be used even when the user doesn't know anything about the user interface by
 the help of an observer. In this case the observer's job is to record the comments of the evaluator\cite{a2020_heuristic}.
 
-\begin{figure}[h]
+\begin{figure*}[tbh]
     \includegraphics[width=1\textwidth]{images/heuristic-results.png}
     \caption{Curve showing the proportion of usability problems in an interface
      found by heuristic evaluation using various numbers of evaluators\cite{a2020_heuristic}.}
      \label{fig:increase}
-\end{figure}
-The output of using heuristic evaluation are problems with the interface with reference to the usability
-principles that were violated\cite{a2020_heuristic}. Because the concreteness of the output 
-its easier and faster to develop a solution for these problems. 
+\end{figure*}
+The output of using heuristic evaluation is a list of problems with reference to the usability
+principles that were violated\cite{a2020_heuristic}. Because of the concreteness of the output 
+it is easier and faster to develop a solution for the found problems compared to outputs generated
+by automated testing solutions. 
 
 
 
 \subsection{Automated testing}
 Automated testing of UI is a relatively new thing\cite{automated_testing_ifml}. There aren't many well known methods
 providing fully automatic testing of a web environment, but a recent study has shown that
-it is possible using Interaction Flow Modeling Language (IFML) Models\cite{automated_testing_ifml}.
+it is possible using Interaction Flow Modeling Language (IFML) models\cite{automated_testing_ifml}.
 IFML is evolved from WebML and its designed to capture the structure, user interaction and control
-flow of front-end of web applications\cite{automated_testing_ifml}.
+flow of the front-end of web applications\cite{automated_testing_ifml}.
 
 
 \paragraph{Content modelling}
@@ -168,8 +170,7 @@ of the front-end. In order to design an IFML model, an UML (Universal Modelling 
 containing the domain concepts of the application is required\cite{automated_testing_ifml}. 
 When the IFML and the UML models are completed they have to be processed by an application written 
 in Java, which will generate a Test case document (.txt), a Navigation Modell (.xta) and a State Transition 
-Matrix (.xls). Then the generated data can be used to analyze and easily spot flaws with the web application, like bad navigation design
-\cite{automated_testing_ifml}. 
+Matrix (.xls)\cite{automated_testing_ifml}. 
 Thanks to usage of generalized Markup Languages this application can be used for all kind of web environments. 
 By using this program we could analyze our web based CLEs for CS and SE students. 
 The produced data then could be used to improve their layout, remove confusing elements and improve the usability of the design,
@@ -178,38 +179,43 @@ making the learning process more efficient.
 
 \section{Analysis of popular environments}\label{analysis}
 The alaysis was done on the following online environments: Udemy, Skillshare, Freecodecamp, Treehouse.
-The analysis was done by myself due to lack of resources for hiring a team. The results are integer values
-from 1-10 where 10 is the best and 1 is the worst. The produced data is not as accurate as it was done
+The analysis was done by myself due to lack of resources for hiring a professional team. The results are integer values
+ranging from 1-10 where 10 is the best and 1 is the worst. The produced data is not as accurate as it was done
 by a professional testing team, it can be subjective, but it should serve as a general pointer for
 how these online CLEs compare to each other.
 
-% Please add the following required packages to your document preamble:
 
-\begin{center}
+
+    \begin{table}
+        \begin{center}
     \begin{tabular}{|l|l|l|l|l|}
     \hline
-                            & \textbf{Udemy} & \textbf{Skillshare} & \textbf{Freecodecamp} & \textbf{Treehouse} \\ \hline
-    Overall usability       & 8              & 10                  & 5                     & 9                  \\ \hline
-    Design intuitivness     & 6              & 10                  & 5                     & 10                 \\ \hline
-    Navigation layout       & 8              & 9                   & 6                     & 8                  \\ \hline
-    Inform. arrangement     & 8              & 10                  & 6                     & 9                  \\ \hline
-    \textbf{Total}          & 30             & 39                  & 22                    & 36                 \\ \hline
+    \setlength\tabcolsep{1pt}
+                                    & \textbf{Udemy} & \textbf{Skillshare} & \textbf{Freecodecamp} & \textbf{Treehouse} \\ \hline
+    \small{Overall usability}       & 8              & 10                  & 5                     & 9                  \\ \hline
+    \small{Design intuitiveness}    & 6              & 10                  & 5                     & 10                 \\ \hline
+    \small{Navigation layout}       & 8              & 9                   & 6                     & 8                  \\ \hline
+    \small{Info. arrangement}       & 8              & 10                  & 6                     & 9                  \\ \hline
+    Total                                  & 30             & 39                  & 22                    & 36                 \\ \hline
     \end{tabular}
 \end{center}
+\end{table}
+
 
 
 \section{Conclusion}
-The currently available online CLEs can be a great tool for improving the learning process, but for 
-them to do that they need to be implemented correctly, they have to be easy to use and compatible 
-width most of the popular browsers. Our analysis shows that the most of the popular ones are
+The currently available online CLEs can be a great tool for improving the learning process, but in order
+to maximize their potential, they need to be implemented correctly, they have to be easy to use and compatible 
+with most of the popular browsers. Our analysis shows that most of the popular ones are
 implemented well. Most of them had a well designed navigation layout, the information were arranged
 in a way that everything could be found easily and all of them were easy to use.   
 
-
-Although there are solutions for automatically analyzing web applications, this technology is still work in progress.
-Manual heuristic analysis can be done by everyone, but the results will not be as precise as in a case done by a professional or by multiple people. For precise data more people is needed.
-There is a growing need of development in testing of these web based learning environments, in order to improve them and make the learning experience more effective.
-
+\subsection*{Testing}
+There is a growing need of development in testing of these web based learning environments, in order
+to improve them and make the learning experience more effective.
+Although there are solutions for automatically analyzing web applications, this technology is still work
+in progress. For precise and concrete data manual heuristic analysis is the more viable option,
+which can be done by everyone, but usually its is recommended to be done by small group of people.
 
 
 \bibliography{citations}
